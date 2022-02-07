@@ -2,12 +2,13 @@ import boto3
 import json
 import time
 
-#for file 2022-01-24T01:00:12.294Z.json in s3, get the startDate and endDate from s3 select
+#for example, for file 2022-01-24T01:00:12.294Z.json in s3, get the startDate and endDate from s3 select
 sessions3 = boto3.Session(profile_name='datascience_dev')
 s3 = sessions3.resource('s3')
 
 bucket = s3.Bucket('ph-datasci-dev-data-lake-20190308174735395300000001')
 
+#query s3 from athena
 for obj in bucket.objects.filter(Prefix='aggregate/'):
     #print(obj.key)
     content_object= s3.Object(bucket.name, obj.key)
