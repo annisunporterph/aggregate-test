@@ -34,6 +34,6 @@ your local machine credentials should be set up this way based on this article:
 https://boto3.amazonaws.com/v1/documentation/api/1.9.42/guide/configuration.html 
 
 2. Aggregate_test_glue is the file i upload to the glue jobs and can be run on demand
-once a while, the output will show on the CloudWatch output logs
+once a while, the output will show on the CloudWatch output logs.
 It has all the standard job parameters like all the other jobs. 
 
